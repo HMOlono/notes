@@ -1,17 +1,18 @@
-# Installation commands
+# RHCSA Lab Setup Commands
 
-Install the "Group" of packages needed for KVM, QEMU and the Virt-Manager GUI  
-
+## 1. Virtualization Install
 ```bash
-sudo dnf install @virtualization
+sudo dnf install @virtualization #Install the "Group" of packages needed for KYM, QEMU and the VIrt-Manager GUI
+sudo systemctl enable --now libvirtd #Start and enable the virt service to run every time the pc turn on
+sudo usermod -aG libvirt $USER #Add user to the group (skip pwd) need to log out and log back in.
+```
+## 2. Manual Service Management
 
-To start and enable the virtualization service every time the computer turn on 
+# Start the engine
+sudo systemctl start libvirtd
 
-```bash
-sudo systemctl enable --now libvirtd
+# Stop the engine 
+sudo systemctl stop libvirtd
 
-```bash
-sudo systemctl start libvirtd # Turn ON
-sudo systemctl stop libvirtd # Turn OFF
-sudo systemctl status libvirtd # To check the status
-
+# Check Status
+sudo systemctl status libvirtd
