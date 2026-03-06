@@ -7,12 +7,8 @@ sudo systemctl enable --now libvirtd #Start and enable the virt service to run e
 sudo usermod -aG libvirt $USER #Add user to the group (skip pwd) need to log out and log back in.
 ```
 ## 2. Manual Service Management
-
-# Start the engine
-sudo systemctl start libvirtd
-
-# Stop the engine 
-sudo systemctl stop libvirtd
-
-# Check Status
-sudo systemctl status libvirtd
+```bash
+sudo systemctl start libvirtd # Start engine
+sudo systemctl stop libvirtd # Stop engine
+sudo systemctl status libvirtd # Check for status
+```
