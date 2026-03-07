@@ -3,7 +3,7 @@
 
 ## Modulo 2 - Operating Systems
 
-**`Embedded Systems`** means that the system is designet to do a specific task on hardware opmitized for onyl that purpose.
+**`Embedded Systems`** means that the system is designet to do a specific task on hardware opmitized for only that purpose.
 
 In Lunix, RPM can be defined as **`The Package Manager`** program for Red Hat Linux. 
 
