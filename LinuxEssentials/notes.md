@@ -1,4 +1,4 @@
-# Linux Essentials Notes
+#:bulb: Linux Essentials Notes
 ## Module 1 - Introduction to Linux 
 
 ## Modulo 2 - Operating Systems
