@@ -19,7 +19,7 @@ Apple's OS X is a **`fully certified UNIX distribution`**
 
 Microsoft Windows has a scripting environment called **`PowerShell`**, offers both **`desktop and server products`** and is generally **`backwards compatible`** with previous versions
 
-When choosing a distribution of Linux, you should consider:  
+**`When choosing`** a distribution of Linux, you should consider:  
 * Will users require a GUI
 * Does the distribution offer a "stable" version
 * Does your organization require long-term support for the system
