@@ -1,7 +1,5 @@
 # 💡 Linux Essentials Notes
-## Module 1 - Introduction to Linux 
-
-## Modulo 2 - Operating Systems
+## Modulo 1 - Operating Systems
 
 **`Embedded Systems`** means that the system is designet to do a specific task on hardware opmitized for only that purpose.
 
@@ -25,5 +23,32 @@ Microsoft Windows has a scripting environment called **`PowerShell`**, offers bo
 * Does your organization require long-term support for the system
 * If the application software is supported by the distribution
 * Will commercial support be required for the OS
+
+## Modulo 2 - Working in Linux
+
+The following pieces of software deal **`with file sharing`**
+* Samba
+* Netatalk
+* NFS
+
+**`POP`** and **`IMAP`** are related to email.
+
+When a computer boots, it can get its network information trough **`DHCP`**
+
+Two characteristics of a **`package manager`** are:
+* Downloads software from the Internet
+* Keeps track of wich files belong to wich packages
+
+The **`linux shell`**
+* Allows you to launch programs
+* Has a scripting language
+* Is customizable
+
+The two main families of Linux shells are **`Bourne Shell`** and **`C shell`**
+
+The **`Tor Browser`** is a tool that helps anonymize the internet browsing
+
+The two components that provide the ability to implement a firewall include: **`iptables`** and **`gufw`**
+
 
 
