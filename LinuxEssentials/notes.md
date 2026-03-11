@@ -1,11 +1,11 @@
 # 💡 Linux Essentials Notes
 ## Modulo 1 - Introduction to Linux
 
-Linux originally only runs on **`Intel 386`** PCs
-
 When most people refer to Linux, they are really referring to a combination of software called **`GNU/Linux`**, which defines the operating system. **`GNU`** is the free software that provides open source equivalents of many common UNIX commands. The **`Linux`** part of this combination is the Linux kernel, which is the core of the operating system. The kernel is loaded at boot time and stays running to manage every aspect of the functioning system.
 
 There are two basic types of interfaces available that allow you to interact with the operating system. The typical computer user today is most familiar with a **`graphical user interface (GUI)`**. The second type of interface is **`the command line interface (CLI)`**, a text-based interface to the computer. The CLI relies primarily on keyboard input. Everything the user wants the computer to do is relayed by typing commands rather than clicking on icons. 
+
+Linux originally only runs on **`Intel 386`** PCs
 
 ## Modulo 2 - Operating Systems
 
