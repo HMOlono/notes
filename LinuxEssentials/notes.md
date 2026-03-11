@@ -1,19 +1,47 @@
 # 💡 Linux Essentials Notes
-## Modulo 1 - Operating Systems
+## Modulo 1 - Introduction to Linux
+
+Linux originally only runs on **`Intel 386`** PCs
+
+When most people refer to Linux, they are really referring to a combination of software called **`GNU/Linux`**, which defines the operating system. **`GNU`** is the free software that provides open source equivalents of many common UNIX commands. The **`Linux`** part of this combination is the Linux kernel, which is the core of the operating system. The kernel is loaded at boot time and stays running to manage every aspect of the functioning system.
+
+There are two basic types of interfaces available that allow you to interact with the operating system. The typical computer user today is most familiar with a **`graphical user interface (GUI)`**. The second type of interface is **`the command line interface (CLI)`**, a text-based interface to the computer. The CLI relies primarily on keyboard input. Everything the user wants the computer to do is relayed by typing commands rather than clicking on icons. 
+
+## Modulo 2 - Operating Systems
 
 **`Embedded Systems`** means that the system is designet to do a specific task on hardware opmitized for only that purpose.
 
+A distribution provide a **`Package Manager`** to add and remove software from the system.
+
 In Lunix, RPM can be defined as **`The Package Manager`** program for Red Hat Linux. 
+
+The **`release cycle`** dictates how often the software is updated.
+
+A **`maintenance cycle`** describes how long a version of software will be supported
 
 A long software **`release cycle`** is: Valued by businesses that want stability.
 
 Bundling utilities, managment tools, and application software with a Linux kernel is called a **`Distribution of Linux`**
+
+A network of inexpensive computers connected to sensors and controllers is calle **`Internet of Thing (IoT)`**
+
+**`IoT`** is one application of embedded systems
+
+Distribution relations:
+* Fedora, CentOS - RedHat
+* Linux Mint - A fork of Ubuntu
+* Ubuntu - Debian
+* SUSE - Slackware
+
+A **`Raspberry Pi`** is a series of small, low-cost, single-board computers (SBCs) developed in the UK by the Raspberry Pi Foundation.
 
 A software release cycle describes **`how often upgrades come out for software`**
 
 If a software release is in a state in that it has many new features that have not been rigorously tested, it is typically referred to as **`beta software`**
 
 Apple's OS X is a **`fully certified UNIX distribution`**
+
+When a software supports old file formats or applications its called **`backward compatible`**
 
 Microsoft Windows has a scripting environment called **`PowerShell`**, offers both **`desktop and server products`** and is generally **`backwards compatible`** with previous versions
 
@@ -24,7 +52,7 @@ Microsoft Windows has a scripting environment called **`PowerShell`**, offers bo
 * If the application software is supported by the distribution
 * Will commercial support be required for the OS
 
-## Modulo 2 - Working in Linux
+## Modulo 3 - Working in Linux
 
 The following pieces of software deal **`with file sharing`**
 * Samba
