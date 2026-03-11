@@ -35,7 +35,9 @@ Distribution relations:
 
 A **`Raspberry Pi`** is a series of small, low-cost, single-board computers (SBCs) developed in the UK by the Raspberry Pi Foundation.
 
-A software release cycle describes **`how often upgrades come out for software`**
+A **`release cycle`** describes how often upgrades come out for software
+
+A **`maintance cycle`** describes how long a version of software will be supported
 
 If a software release is in a state in that it has many new features that have not been rigorously tested, it is typically referred to as **`beta software`**
 
