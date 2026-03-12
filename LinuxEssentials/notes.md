@@ -1,5 +1,5 @@
-# 💡 Linux Essentials Notes
-## Modulo 1 - Introduction to Linux
+# 📖 Linux Essentials Notes
+## :small_blue_diamond:Modulo 1 - Introduction to Linux
 
 When most people refer to Linux, they are really referring to a combination of software called **`GNU/Linux`**, which defines the operating system. **`GNU`** is the free software that provides open source equivalents of many common UNIX commands. The **`Linux`** part of this combination is the Linux kernel, which is the core of the operating system. The kernel is loaded at boot time and stays running to manage every aspect of the functioning system.
 
@@ -7,7 +7,7 @@ There are two basic types of interfaces available that allow you to interact wit
 
 Linux originally only runs on **`Intel 386`** PCs
 
-## Modulo 2 - Operating Systems
+## :small_blue_diamond:Modulo 2 - Operating Systems
 
 **`Embedded Systems`** means that the system is designet to do a specific task on hardware opmitized for only that purpose.
 
@@ -54,7 +54,7 @@ Microsoft Windows has a scripting environment called **`PowerShell`**, offers bo
 * If the application software is supported by the distribution
 * Will commercial support be required for the OS
 
-## Modulo 3 - Working in Linux
+## :small_blue_diamond:Modulo 3 - Working in Linux
 
 The following pieces of software deal **`with file sharing`**
 * Samba
