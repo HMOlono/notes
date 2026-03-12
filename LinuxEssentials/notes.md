@@ -61,6 +61,12 @@ The following pieces of software deal **`with file sharing`**
 * Netatalk
 * NFS
 
+**`Samba`** is use to let a Linux machine share files with Windows clients and servers.
+
+The **`Samba`** aplication is a File Server.
+
+A **`Mail Transfer Agent`** primary purpose is to deliver mail between servers.
+
 **`POP`** and **`IMAP`** are related to email.
 
 When a computer boots, it can get its network information trough **`DHCP`**
@@ -76,9 +82,19 @@ The **`linux shell`**
 
 The two main families of Linux shells are **`Bourne Shell`** and **`C shell`**
 
+In a graphical mode you can get to a shell by running **`Terminal`** and **`Xterm`**
+
+**`Virtualization`** means a single host can be split up into multiple guests
+
+Some characteristic of a **`multiuser operating system`** are:
+* Many users can log in simultaneously with a unique account
+* Users can protect their information from other users
+* Resources are shared between users
+
 The **`Tor Browser`** is a tool that helps anonymize the internet browsing
 
 The two components that provide the ability to implement a firewall include: **`iptables`** and **`gufw`**
+
 
 
 
