@@ -107,7 +107,7 @@ A license where you dont have access to the source code is called: **`Closed sou
 * You should have access to the source code of software
 * You should be able modify the software as you wish
 
-1. Permissive Licenses (The "Business-Friendly" Model)
+### :small_orange_diamond:1. Permissive Licenses (The "Business-Friendly" Model)
 These are the most relaxed. They basically say: "You can do whatever you want with this code, including using it in private or commercial software, as long as you keep my name on it."
 
 **`Key Philosophy`**: Total freedom of use.
@@ -120,7 +120,7 @@ The big difference between the **`GPLv2`** and **`BSD`** is that **`BSD`** has n
 
 A **`permissive free software license`** means you can use the software for anything you want and places no restrictions on sharing modifications.
 
-2. Copyleft Licenses (The "Reciprocal" Model)
+### :small_orange_diamond:2. Copyleft Licenses (The "Reciprocal" Model)
 These are "protective" licenses. They say: "You can use and change this, but if you share your version with others, you must share your source code under these same rules."
 
 **`Key Philosophy`**: Ensuring the software remains free forever.
@@ -147,7 +147,7 @@ Linux is distributed under the **`GPLv2`**
 
 If a company makes a hardware firewall that runs a custom Linux kernel, the obligations under **`GPLv2`** are that you must make the source to your kernel avaibale.
 
-3. Weak Copyleft (The "Compromise" Model)
+### :small_orange_diamond:3. Weak Copyleft (The "Compromise" Model)
 This sits in the middle. It is usually designed for libraries (reusable components).
 
 **`Key Philosophy`**: Allow free components to be used by everyone, but keep the components themselves free.
