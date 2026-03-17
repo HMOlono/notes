@@ -116,6 +116,8 @@ These are the most relaxed. They basically say: "You can do whatever you want wi
 
 **`BSD and MIT`** are examples of permissive software licenses.
 
+**`Why companies love them`**: A company can take an MIT-licensed tool, improve it, and sell it as a closed-source product without sharing their secret improvements.
+
 The big difference between the **`GPLv2`** and **`BSD`** is that **`BSD`** has no copyleft provision
 
 A **`permissive free software license`** means you can use the software for anything you want and places no restrictions on sharing modifications.
@@ -156,9 +158,7 @@ This sits in the middle. It is usually designed for libraries (reusable componen
 
 **`How it works`**: You can use an LGPL library in a proprietary app without opening your app's code. However, if you modify the library itself, you must share those specific changes.
 
-**`Why companies love them`**: A company can take an MIT-licensed tool, improve it, and sell it as a closed-source product without sharing their secret improvements.
-
-4. Creative Commons. 
+### :small_orange_diamond:4. Creative Commons. 
 While GPL and MIT are for code, Creative Commons is for content (text, images, video, and documentation).
 
 **`Creative Commons`** licenses allow to:
