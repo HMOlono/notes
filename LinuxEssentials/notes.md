@@ -95,6 +95,73 @@ The **`Tor Browser`** is a tool that helps anonymize the internet browsing
 
 The two components that provide the ability to implement a firewall include: **`iptables`** and **`gufw`**
 
+## :small_blue_diamond:Open source Software and Licensing
 
+**`Source code`** refers to a human-readable version of computer software.
 
+A license where you dont have access to the source code is called: **`Closed source`**.
 
+**`Open source means`** that you can view and modify the software's source code.
+
+**`Open source licenses differ`** but generally agree that:
+* You should have access to the source code of software
+* You should be able modify the software as you wish
+
+1. Permissive Licenses (The "Business-Friendly" Model)
+These are the most relaxed. They basically say: "You can do whatever you want with this code, including using it in private or commercial software, as long as you keep my name on it."
+
+**`Key Philosophy`**: Total freedom of use.
+
+**`Major Licenses`**: MIT, BSD, and Apache 2.0.
+
+**`BSD and MIT`** are examples of permissive software licenses.
+
+The big difference between the **`GPLv2`** and **`BSD`** is that **`BSD`** has no copyleft provision
+
+A **`permissive free software license`** means you can use the software for anything you want and places no restrictions on sharing modifications.
+
+2. Copyleft Licenses (The "Reciprocal" Model)
+These are "protective" licenses. They say: "You can use and change this, but if you share your version with others, you must share your source code under these same rules."
+
+**`Key Philosophy`**: Ensuring the software remains free forever.
+
+**`Major Licenses`**: GPL (General Public License) and AGPL.
+
+**`The "Viral" Effect`**: If you include GPL code in a project, your entire project usually becomes GPL. This prevents companies from "privatizing" open-source work.
+
+The **`Open Source Initiative (OSI)`** was founded by **`Bruce Perens`** and **`Eric Raymond`**
+
+**`Linux`** source code is available to anyone who has the knowledge needed to access it.
+
+Linux is distributed under the **`GPLv2`**
+
+**`GPLv3`** was made by the FSF.
+
+**`GPL vs LGPL`**: You can link a proprietary (closed-source) program to an LGPL library without being forced to open-source your own program.
+
+**`Copyleft`** means that if you redistribute the software, you must redistribute the source to any changes you make.
+
+**`Richard Stallman`** is associated with **`The Free Software Foundation (FSF)`**.
+
+**`The FSF`** believes that software should be free to modify and share.
+
+If a company makes a hardware firewall that runs a custom Linux kernel, the obligations under **`GPLv2`** are that you must make the source to your kernel avaibale.
+
+3. Weak Copyleft (The "Compromise" Model)
+This sits in the middle. It is usually designed for libraries (reusable components).
+
+**`Key Philosophy`**: Allow free components to be used by everyone, but keep the components themselves free.
+
+**`Major Licenses`**: LGPL (Lesser GPL) and MPL (Mozilla Public License).
+
+**`How it works`**: You can use an LGPL library in a proprietary app without opening your app's code. However, if you modify the library itself, you must share those specific changes.
+
+**`Why companies love them`**: A company can take an MIT-licensed tool, improve it, and sell it as a closed-source product without sharing their secret improvements.
+
+4. Creative Commons. 
+While GPL and MIT are for code, Creative Commons is for content (text, images, video, and documentation).
+
+**`Creative Commons`** licenses allow to:
+* Specify whether or not people may distribute changes.
+* Specify whether or not changes must be shared.
+* Allow or disallow commercial use.
