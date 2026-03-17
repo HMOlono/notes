@@ -120,6 +120,8 @@ The big difference between the **`GPLv2`** and **`BSD`** is that **`BSD`** has n
 
 A **`permissive free software license`** means you can use the software for anything you want and places no restrictions on sharing modifications.
 
+The **`Open Source Initiative (OSI)`** was founded by **`Bruce Perens`** and **`Eric Raymond`**
+
 ### :small_orange_diamond:2. Copyleft Licenses (The "Reciprocal" Model)
 These are "protective" licenses. They say: "You can use and change this, but if you share your version with others, you must share your source code under these same rules."
 
@@ -128,8 +130,6 @@ These are "protective" licenses. They say: "You can use and change this, but if 
 **`Major Licenses`**: GPL (General Public License) and AGPL.
 
 **`The "Viral" Effect`**: If you include GPL code in a project, your entire project usually becomes GPL. This prevents companies from "privatizing" open-source work.
-
-The **`Open Source Initiative (OSI)`** was founded by **`Bruce Perens`** and **`Eric Raymond`**
 
 **`Linux`** source code is available to anyone who has the knowledge needed to access it.
 
