@@ -191,7 +191,7 @@ An **`argument`** can be used to specify something for the command to act upon. 
 
 A **`variable`** is a feature that allows the user or the shell to store data. This data can be used to provide critical system information or to change the behavior of how the Bash shell (or other commands) work. Variables are given names and stored temporarily in memory. There are two types of variables used in the Bash shell: **`local`** and **`environment`**.
 
-#### Local Variables
+#### :small_orange_diamond:Local Variables
 
 Local or shell variables exist only in the current shell, and cannot affect other commands or applications. When the user closes a terminal window or shell, **`all of the variables are lost`**. They are often associated with user-based tasks and are lowercase by convention.
 
@@ -199,7 +199,7 @@ Local or shell variables exist only in the current shell, and cannot affect othe
 
 The `echo` command is used to display ouytput in the terminal.
 
-#### Environment Variables
+#### :small_orange_diamond:Environment Variables
 
 **`Environment variables`**, also called **`global variables`**, are available system-wide, in all shells used by Bash when interpreting commands and performing tasks. The system automatically recreates environment variables when a new shell is opened.
 
@@ -219,12 +219,33 @@ The `env` command outputs a list of the environment variables. We can use a pipe
 sysadmin@localhost:~$ env | grep variable1
 ```
 To export a variable we use the command export. Ex:
-```export *variable*```
-
+```
+export *variable*
+```
 The export command can also be used to make a variable an environment variable upon its creation by using the assignment expression as the argument:
-```sysadmin@localhost:~$ export variable2='Else'```
-
+```
+sysadmin@localhost:~$ export variable2='Else'
+```
 To change the value of an environment variable, we use the assignment expression:
-```sysadmin@localhost:~$ variable1=$variable1' '$variable2                
+```
+sysadmin@localhost:~$ variable1=$variable1' '$variable2                
 sysadmin@localhost:~$ echo $variable1                                   
-Something Else```
+Something Else
+```
+
+#### Path Variable
+
+The **`path variable`** contains a list that defines wich directories the shell looks in to find commands. The following command displays the path of the current shell:
+```
+sysadmin@localhost:~$ echo $PATH                                        
+/home/sysadmin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+sysadmin@localhost:~$
+```
+Each directory in the list is separated by a colon `:` character.
+
+When updating the PATH variable, **`always include the current path`**, appending `$PATH` to the value in the assignment expresion. 
+```
+sysadmin@localhost:~$ echo $PATH                                       
+/usr/bin/custom:/home/sysadmin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games                           
+```
+A variable name preceded by a dollar sign represents **`the value`** of the variable.
