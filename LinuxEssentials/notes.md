@@ -165,3 +165,66 @@ While GPL and MIT are for code, Creative Commons is for content (text, images, v
 * Specify whether or not people may distribute changes.
 * Specify whether or not changes must be shared.
 * Allow or disallow commercial use.
+
+## :small_blue_diamond:Modulo 5 - Command Line Skills
+
+### Commands
+A **`command`** is a software program that, when executed on the CLI, performs an action on the computer.
+
+`command [options] [arguments]`
+
+An **`argument`** can be used to specify something for the command to act upon. If the ls command is given the name of a directory as an argument, it lists the contents of that directory. In the following example, the /etc/ppp directory is used as an argument.
+
+**`Options`** can be used with commands to expand or modify the way a command behaves. For example, using the -l option of the ls command results in a long listing, providing additional information about the files that are listed, such as the permissions, the size of the file and other information:
+
+**`History`**: When a command is executed in the terminal, it is stored in a history list. This is designed to make it easy to execute the same command, later eliminating the need to retype the entire command.
+
+**`History commands`**:
+* `Up Arrow` = key displays the previous command on the prompt line.
+* `history` command = view the history list of a terminal.
+* `!#` = execute the desired command in the list (# number of the command)
+* `!-n` = execute the nth command from the bottom of the history list.
+* `!!` = execute the most recent command
+* `![command]` = execute the most recent iteration of a specific command.
+
+### Variables
+
+A **`variable`** is a feature that allows the user or the shell to store data. This data can be used to provide critical system information or to change the behavior of how the Bash shell (or other commands) work. Variables are given names and stored temporarily in memory. There are two types of variables used in the Bash shell: **`local`** and **`environment`**.
+
+#### Local Variables
+
+Local or shell variables exist only in the current shell, and cannot affect other commands or applications. When the user closes a terminal window or shell, **`all of the variables are lost`**. They are often associated with user-based tasks and are lowercase by convention.
+
+`variable=value` is used to set the value of a variable.
+
+The `echo` command is used to display ouytput in the terminal.
+
+#### Environment Variables
+
+**`Environment variables`**, also called **`global variables`**, are available system-wide, in all shells used by Bash when interpreting commands and performing tasks. The system automatically recreates environment variables when a new shell is opened.
+
+The **`HISTSIZE`** variable defines how many previous commands to store in the history list. The command in the example below displays the value of the `HISTSIZE` variable:
+```
+sysadmin@localhost:~$ echo $HISTSIZE
+1000
+```
+To modify the value of an existing variable, use the assignment expression:
+```
+sysadmin@localhost:~$ HISTSIZE=500                                            
+sysadmin@localhost:~$ echo $HISTSIZE                              
+500
+```
+The `env` command outputs a list of the environment variables. We can use a pipeline (|) with grep to search for specific variable.
+```
+sysadmin@localhost:~$ env | grep variable1
+```
+To export a variable we use the command export. Ex:
+```export *variable*```
+
+The export command can also be used to make a variable an environment variable upon its creation by using the assignment expression as the argument:
+```sysadmin@localhost:~$ export variable2='Else'```
+
+To change the value of an environment variable, we use the assignment expression:
+```sysadmin@localhost:~$ variable1=$variable1' '$variable2                
+sysadmin@localhost:~$ echo $variable1                                   
+Something Else```
