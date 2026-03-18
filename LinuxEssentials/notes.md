@@ -233,13 +233,12 @@ sysadmin@localhost:~$ echo $variable1
 Something Else
 ```
 
-#### Path Variable
+#### :small_orange_diamond:Path Variable
 
 The **`path variable`** contains a list that defines wich directories the shell looks in to find commands. The following command displays the path of the current shell:
 ```
 sysadmin@localhost:~$ echo $PATH                                        
 /home/sysadmin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-sysadmin@localhost:~$
 ```
 Each directory in the list is separated by a colon `:` character.
 
