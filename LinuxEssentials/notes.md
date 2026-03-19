@@ -1,19 +1,17 @@
 # 📖 Linux Essentials Notes
-## :small_blue_diamond:Modulo 1 - Introduction to Linux
-
+## :large_blue_diamond:Modulo 1 - Introduction to Linux
 When most people refer to Linux, they are really referring to a combination of software called **`GNU/Linux`**, which defines the operating system. **`GNU`** is the free software that provides open source equivalents of many common UNIX commands. The **`Linux`** part of this combination is the Linux kernel, which is the core of the operating system. The kernel is loaded at boot time and stays running to manage every aspect of the functioning system.
 
 There are two basic types of interfaces available that allow you to interact with the operating system. The typical computer user today is most familiar with a **`graphical user interface (GUI)`**. The second type of interface is **`the command line interface (CLI)`**, a text-based interface to the computer. The CLI relies primarily on keyboard input. Everything the user wants the computer to do is relayed by typing commands rather than clicking on icons. 
 
 Linux originally only runs on **`Intel 386`** PCs
 
-## :small_blue_diamond:Modulo 2 - Operating Systems
-
-**`Embedded Systems`** means that the system is designet to do a specific task on hardware opmitized for only that purpose.
+## :large_blue_diamond:Modulo 2 - Operating Systems
+**`Embedded Systems`** means that the system is designed to do a specific task on hardware optimized for only that purpose.
 
 A distribution provide a **`Package Manager`** to add and remove software from the system.
 
-In Lunix, RPM can be defined as **`The Package Manager`** program for Red Hat Linux. 
+In Linux, RPM can be defined as **`The Package Manager`** program for Red Hat Linux. 
 
 The **`release cycle`** dictates how often the software is updated.
 
@@ -21,7 +19,7 @@ A **`maintenance cycle`** describes how long a version of software will be suppo
 
 A long software **`release cycle`** is: Valued by businesses that want stability.
 
-Bundling utilities, managment tools, and application software with a Linux kernel is called a **`Distribution of Linux`**
+Bundling utilities, management tools, and application software with a Linux kernel is called a **`Distribution of Linux`**
 
 A network of inexpensive computers connected to sensors and controllers is calle **`Internet of Thing (IoT)`**
 
@@ -54,8 +52,7 @@ Microsoft Windows has a scripting environment called **`PowerShell`**, offers bo
 * If the application software is supported by the distribution
 * Will commercial support be required for the OS
 
-## :small_blue_diamond:Modulo 3 - Working in Linux
-
+## :large_blue_diamond:Modulo 3 - Working in Linux
 The following pieces of software deal **`with file sharing`**
 * Samba
 * Netatalk
@@ -63,7 +60,7 @@ The following pieces of software deal **`with file sharing`**
 
 **`Samba`** is use to let a Linux machine share files with Windows clients and servers.
 
-The **`Samba`** aplication is a File Server.
+The **`Samba`** application is a File Server.
 
 A **`Mail Transfer Agent`** primary purpose is to deliver mail between servers.
 
@@ -73,7 +70,7 @@ When a computer boots, it can get its network information trough **`DHCP`**
 
 Two characteristics of a **`package manager`** are:
 * Downloads software from the Internet
-* Keeps track of wich files belong to wich packages
+* Keeps track of which files belong to which packages
 
 The **`linux shell`**
 * Allows you to launch programs
@@ -95,11 +92,10 @@ The **`Tor Browser`** is a tool that helps anonymize the internet browsing
 
 The two components that provide the ability to implement a firewall include: **`iptables`** and **`gufw`**
 
-## :small_blue_diamond:Open source Software and Licensing
-
+## :large_blue_diamond:Open source Software and Licensing
 **`Source code`** refers to a human-readable version of computer software.
 
-A license where you dont have access to the source code is called: **`Closed source`**.
+A license where you don't have access to the source code is called: **`Closed source`**.
 
 **`Open source means`** that you can view and modify the software's source code.
 
@@ -147,7 +143,7 @@ Linux is distributed under the **`GPLv2`**
 
 **`The FSF`** believes that software should be free to modify and share.
 
-If a company makes a hardware firewall that runs a custom Linux kernel, the obligations under **`GPLv2`** are that you must make the source to your kernel avaibale.
+If a company makes a hardware firewall that runs a custom Linux kernel, the obligations under **`GPLv2`** are that you must make the source to your kernel available.
 
 ### :small_orange_diamond:3. Weak Copyleft (The "Compromise" Model)
 This sits in the middle. It is usually designed for libraries (reusable components).
@@ -166,9 +162,8 @@ While GPL and MIT are for code, Creative Commons is for content (text, images, v
 * Specify whether or not changes must be shared.
 * Allow or disallow commercial use.
 
-## :small_blue_diamond:Modulo 5 - Command Line Skills
-
-### Commands
+## :large_blue_diamond:Modulo 5 - Command Line Skills
+### :small_blue_diamond:Commands
 A **`command`** is a software program that, when executed on the CLI, performs an action on the computer.
 
 `command [options] [arguments]`
@@ -187,20 +182,17 @@ An **`argument`** can be used to specify something for the command to act upon. 
 * `!!` = execute the most recent command
 * `![command]` = execute the most recent iteration of a specific command.
 
-### Variables
-
+### :small_blue_diamond:Variables
 A **`variable`** is a feature that allows the user or the shell to store data. This data can be used to provide critical system information or to change the behavior of how the Bash shell (or other commands) work. Variables are given names and stored temporarily in memory. There are two types of variables used in the Bash shell: **`local`** and **`environment`**.
 
 #### :small_orange_diamond:Local Variables
-
 Local or shell variables exist only in the current shell, and cannot affect other commands or applications. When the user closes a terminal window or shell, **`all of the variables are lost`**. They are often associated with user-based tasks and are lowercase by convention.
 
 `variable=value` is used to set the value of a variable.
 
-The `echo` command is used to display ouytput in the terminal.
+The `echo` command is used to display output in the terminal.
 
 #### :small_orange_diamond:Environment Variables
-
 **`Environment variables`**, also called **`global variables`**, are available system-wide, in all shells used by Bash when interpreting commands and performing tasks. The system automatically recreates environment variables when a new shell is opened.
 
 The **`HISTSIZE`** variable defines how many previous commands to store in the history list. The command in the example below displays the value of the `HISTSIZE` variable:
@@ -234,17 +226,135 @@ Something Else
 ```
 
 #### :small_orange_diamond:Path Variable
-
-The **`path variable`** contains a list that defines wich directories the shell looks in to find commands. The following command displays the path of the current shell:
+The **`path variable`** contains a list that defines with directories the shell looks in to find commands. The following command displays the path of the current shell:
 ```
 sysadmin@localhost:~$ echo $PATH                                        
 /home/sysadmin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 ```
 Each directory in the list is separated by a colon `:` character.
 
-When updating the PATH variable, **`always include the current path`**, appending `$PATH` to the value in the assignment expresion. 
+When updating the PATH variable, **`always include the current path`**, appending `$PATH` to the value in the assignment expression. 
 ```
 sysadmin@localhost:~$ echo $PATH                                       
 /usr/bin/custom:/home/sysadmin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games                           
 ```
 A variable name preceded by a dollar sign represents **`the value`** of the variable.
+
+### :small_blue_diamond:Command Types
+There are several different sources of commands within the shell of the CLI including **`*internal*, *external*, *aliases* and *functions*`**
+
+The type command can be used to determine information about command type. Ex.
+```
+type command
+```
+
+#### :small_orange_diamond:Internal Commands
+Also called **`built-in commands`**, internal commands are built into the shell itself. A good example is the `cd` (change directory) command as it is part of the Bash shell. 
+```
+sysadmin@localhost:~$ type cd                                     
+cd is a shell builtin
+```
+
+#### :small_orange_diamond:External Commands
+**`External commands`** are binary executables stored in directories that are searched by the shell. We use which to display the full path to the command in question:
+```
+sysadmin@localhost:~$ which ls                                       
+/bin/ls                                                               
+sysadmin@localhost:~$ which cal                                        
+/usr/bin/cal
+```
+For external commands, the `type` command displays the location of the command:
+```
+sysadmin@localhost:~$ type cal                                      
+cal is /usr/bin/cal
+```
+Using the -a option of the type command displays all locations that contain the command named:
+```
+sysadmin@localhost:~$ type -a echo                                      
+echo is a shell builtin                                                
+echo is /bin/echo
+```
+#### :small_orange_diamond:Aliases
+An `alias` can be used to map longer commands to shorter key sequences, new aliases can be created using the following format, where name is the `name` to be given the alias and command is the `command` to be executed when the alias is run.
+```
+alias name=command
+```
+#### :small_orange_diamond:Functions
+Functions can also be built using existing commands to either create new commands, or to override commands built-in to the shell or commands stored in files. Aliases and functions are normally loaded from the initialization files when the shell first starts.
+
+To create a function, the following syntax is used:
+```
+function_name () 
+{
+   commands
+}
+```
+Functions are useful as they allow for a set of commands to be executed one at a time instead of typing each command repeatedly. In the example below, a function called my_report is created to execute the ls, date, and echo commands.
+```
+sysadmin@localhost:~$ my_report () {                                            
+> ls Documents                                                                  
+> date                                                                          
+> echo "Document directory report"                                              
+> }    
+```
+Once a function is created, the **`function name`** may be invoked from the BASH prompt to execute the function:
+```
+sysadmin@localhost:~$ my_report                                                 
+School            alpha-third.txt  hidden.txt    numbers.txt  spelling.txt      
+Work              alpha.txt        letters.txt   os.csv       words             
+adjectives.txt    animals.txt      linux.txt     people.csv                     
+alpha-first.txt   food.txt         longfile.txt  profile.txt                    
+alpha-second.txt  hello.sh         newhome.txt   red.txt                        
+Wed Oct 13 06:54:04 UTC 2021                                                    
+Document directory report                                                       
+sysadmin@localhost:~$  
+```
+
+### :small_blue_diamond:Quoting
+Quotation marks are used throughout Linux administration and most computer programming languages to let the system know that the information contained within the quotation marks should either be ignored or treated in a way that is very different than it would normally be treated.
+
+There are three types of quotes that have special significance to the Bash shell: **`double quotes ", single quotes ', and back quotes ``**. Each set of quotes alerts the shell not to treat the text within the quotes in the normal way.
+
+#### :small_orange_diamond:Double Quotes
+Double quotes still allow for command substitution, variable substitution, and permit some other shell metacharacters that haven't been discussed yet. The following demonstration shows that the value of the PATH variable is still displayed:
+```
+sysadmin@localhost:~$ echo "The path is $PATH"                          
+The path is /usr/bin/custom:/home/sysadmin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+```
+
+#### :small_orange_diamond:Single Quotes
+Single quotes prevent the shell from doing any interpreting of special characters, including globs, variables, command substitution and other metacharacters.
+
+For example, to make the $ character simply mean a $, rather than it acting as an indicator to the shell to look for the value of a variable, execute the second command displayed below:
+```
+sysadmin@localhost:~$ echo The car costs $100                           
+The car costs 00                                                        
+sysadmin@localhost:~$ echo 'The car costs $100'                        
+The car costs $100
+```
+
+#### :small_orange_diamond:Backlash Character
+Also known as the **`Escape Character`**. Its primary job is to tell the system: "Hey, don't treat the next character literally; it has a special meaning," or conversely, "Treat this special character as plain text."
+```
+sysadmin@localhost:~$ echo The service costs \$1 and the path is $PATH
+The service costs $1 and the path is /usr/bin/custom:/home/sysadmin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+```
+
+#### :small_orange_diamond:Backquotes
+*Backquotes*, or *backticks*, are used to specify a command within a command, a process called command substitution. This allows for powerful and sophisticated use of commands.
+```
+sysadmin@localhost:~$ echo Today is `date`                         
+Today is Mon Nov 4 03:40:04 UTC 2018
+```
+### :small_blue_diamond:Control Statements 
+**`Control statements`** allow you to use multiple commands at once or run additional commands, depending on the success of a previous command. Typically these control statements are used within scripts, but they can also be used on the command line as well.
+
+#### :small_orange_diamond:Semicolon
+The semicolon ; character can be used to run multiple commands, one after the other. Each command runs independently and consecutively; regardless of the result of the first command, the second command runs once the first has completed, then the third and so on.
+
+#### :small_orange_diamond:Double Ampersand
+The double ampersand **`&&`** acts as a logical "and"; if the first command is successful, then the second command will also run. If the first command fails, then the second command will not run.
+
+#### :small_orange_diamond:Double Pipe 
+The **`double pipe ||`** is a logical "or". Depending on the result of the first command, the second command will either run or be skipped.
+With the double pipe, if the first command runs successfully, the second command is skipped; if the first command fails, then the second command is run.
