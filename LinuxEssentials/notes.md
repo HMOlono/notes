@@ -1,12 +1,12 @@
 # 📖 Linux Essentials Notes
-## :large_blue_diamond:Modulo 1 - Introduction to Linux
+## :large_blue_diamond: Module 1 - Introduction to Linux
 When most people refer to Linux, they are really referring to a combination of software called **`GNU/Linux`**, which defines the operating system. **`GNU`** is the free software that provides open source equivalents of many common UNIX commands. The **`Linux`** part of this combination is the Linux kernel, which is the core of the operating system. The kernel is loaded at boot time and stays running to manage every aspect of the functioning system.
 
 There are two basic types of interfaces available that allow you to interact with the operating system. The typical computer user today is most familiar with a **`graphical user interface (GUI)`**. The second type of interface is **`the command line interface (CLI)`**, a text-based interface to the computer. The CLI relies primarily on keyboard input. Everything the user wants the computer to do is relayed by typing commands rather than clicking on icons. 
 
 Linux originally only runs on **`Intel 386`** PCs
 
-## :large_blue_diamond:Modulo 2 - Operating Systems
+## :large_blue_diamond: Module 2 - Operating Systems
 **`Embedded Systems`** means that the system is designed to do a specific task on hardware optimized for only that purpose.
 
 A distribution provide a **`Package Manager`** to add and remove software from the system.
@@ -52,7 +52,7 @@ Microsoft Windows has a scripting environment called **`PowerShell`**, offers bo
 * If the application software is supported by the distribution
 * Will commercial support be required for the OS
 
-## :large_blue_diamond:Modulo 3 - Working in Linux
+## :large_blue_diamond: Module 3 - Working in Linux
 The following pieces of software deal **`with file sharing`**
 * Samba
 * Netatalk
@@ -92,7 +92,7 @@ The **`Tor Browser`** is a tool that helps anonymize the internet browsing
 
 The two components that provide the ability to implement a firewall include: **`iptables`** and **`gufw`**
 
-## :large_blue_diamond:Open source Software and Licensing
+## :large_blue_diamond: Module 4 - Open source Software and Licensing
 **`Source code`** refers to a human-readable version of computer software.
 
 A license where you don't have access to the source code is called: **`Closed source`**.
@@ -103,7 +103,7 @@ A license where you don't have access to the source code is called: **`Closed so
 * You should have access to the source code of software
 * You should be able modify the software as you wish
 
-### :small_orange_diamond:1. Permissive Licenses (The "Business-Friendly" Model)
+### :small_blue_diamond:1. Permissive Licenses (The "Business-Friendly" Model)
 These are the most relaxed. They basically say: "You can do whatever you want with this code, including using it in private or commercial software, as long as you keep my name on it."
 
 **`Key Philosophy`**: Total freedom of use.
@@ -120,7 +120,7 @@ A **`permissive free software license`** means you can use the software for anyt
 
 The **`Open Source Initiative (OSI)`** was founded by **`Bruce Perens`** and **`Eric Raymond`**
 
-### :small_orange_diamond:2. Copyleft Licenses (The "Reciprocal" Model)
+### :small_blue_diamond:2. Copyleft Licenses (The "Reciprocal" Model)
 These are "protective" licenses. They say: "You can use and change this, but if you share your version with others, you must share your source code under these same rules."
 
 **`Key Philosophy`**: Ensuring the software remains free forever.
@@ -145,7 +145,7 @@ Linux is distributed under the **`GPLv2`**
 
 If a company makes a hardware firewall that runs a custom Linux kernel, the obligations under **`GPLv2`** are that you must make the source to your kernel available.
 
-### :small_orange_diamond:3. Weak Copyleft (The "Compromise" Model)
+### :small_blue_diamond:3. Weak Copyleft (The "Compromise" Model)
 This sits in the middle. It is usually designed for libraries (reusable components).
 
 **`Key Philosophy`**: Allow free components to be used by everyone, but keep the components themselves free.
@@ -154,7 +154,7 @@ This sits in the middle. It is usually designed for libraries (reusable componen
 
 **`How it works`**: You can use an LGPL library in a proprietary app without opening your app's code. However, if you modify the library itself, you must share those specific changes.
 
-### :small_orange_diamond:4. Creative Commons. 
+### :small_blue_diamond:4. Creative Commons. 
 While GPL and MIT are for code, Creative Commons is for content (text, images, video, and documentation).
 
 **`Creative Commons`** licenses allow to:
@@ -162,7 +162,7 @@ While GPL and MIT are for code, Creative Commons is for content (text, images, v
 * Specify whether or not changes must be shared.
 * Allow or disallow commercial use.
 
-## :large_blue_diamond:Modulo 5 - Command Line Skills
+## :large_blue_diamond: Module 5 - Command Line Skills
 ### :small_blue_diamond:Commands
 A **`command`** is a software program that, when executed on the CLI, performs an action on the computer.
 
