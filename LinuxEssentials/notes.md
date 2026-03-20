@@ -359,7 +359,7 @@ The double ampersand **`&&`** acts as a logical "and"; if the first command is s
 The **`double pipe ||`** is a logical "or". Depending on the result of the first command, the second command will either run or be skipped.
 With the double pipe, if the first command runs successfully, the second command is skipped; if the first command fails, then the second command is run.
 
-## :large_blue_diamond: Chapter 6: Getting Help
+## :large_blue_diamond: Module 6: Getting Help
 
 UNIX is the operating system that Linux was modeled after. The developers of UNIX created help documents called **`man pages`** (short for manual pages).
 
