@@ -406,7 +406,6 @@ passwd (5)           - the password file
 passwd (1)           - change user password                           
 passwd (1ssl)        - compute password hashes     
 ```
-
 On most Linux distributions, the `whatis` command does the same thing as `man -f`. On those distributions both will produce the same output. 
 
 To specify a different section, provide the **`number of the section`** as the first argument of the man command.
@@ -442,12 +441,16 @@ sysadmin@localhost:~$ locate -c passwd
 ```
 ### :small_blue_diamond: Info Documentation
 
+To **`get help`** on using the info command execute: `man info` or `info info`
+
 The `info` command also provides documentation on operating system commands and features. The goal is slightly different from man pages: **`to provide a documentation resource that gives a logical organizational structure, making reading documentation easier.`**
 
 To display the info documentation for a command, use the info command.
 ```
 sysadmin@localhost:~$ info ls       
 ```
+To get help while using the info command, press SHIFT+H
+
 Note that going into the node about sorting leads into a sub-node of the original. To **`go back to the previous node`**, use the **`U`** key. While U leads to the start of the node one level up, the **`L`** key returns **`to the same location`** as before entering the sorting node.
 
 To see a listing of **`movement commands`** is hitting the `Shift+H` key. It also works for man pages.
@@ -479,3 +482,6 @@ With no FILE, or when FILE is -, read standard input.
                                                                                 
 Examples:                                             
 ```
+On most systems, there is a directory where additional documentation is found. The location of these files can vary depending on the distribution that you are using. Typical locations include /usr/share/doc and /usr/doc.
+
+
