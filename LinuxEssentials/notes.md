@@ -358,3 +358,124 @@ The double ampersand **`&&`** acts as a logical "and"; if the first command is s
 #### :small_orange_diamond:Double Pipe 
 The **`double pipe ||`** is a logical "or". Depending on the result of the first command, the second command will either run or be skipped.
 With the double pipe, if the first command runs successfully, the second command is skipped; if the first command fails, then the second command is run.
+
+## :large_blue_diamond: Chapter 6: Getting Help
+
+UNIX is the operating system that Linux was modeled after. The developers of UNIX created help documents called **`man pages`** (short for manual pages).
+
+Man pages are used to describe the **`features of commands`**. They provide a basic description of the purpose of the command, as well as details regarding available options.
+
+To view a man page for a command, use the man command:
+```
+man command
+```
+
+To exit viewing a man page, use the **`Q`** key.
+
+Man pages are broken **`into sections`**. Each section is designed to provide specific information about a command. 
+
+Common *man* sections:
+* NAME: Provides the name of the command and a very brief description   
+* SYNOPSIS: Provides examples of how the command is executed.
+* DESCRIPTION: Provides a more detailed description of the command.
+* OPTIONS: Lists the options for the command as well as a description of how they are used. 
+* FILES: Lists the files that are associated with the command as well as a description of how they are used.
+* AUTHOR: Provides the name of the person who created the man page and (sometimes) how to contact the person.
+* COPYRIGHT: Provides a basic copyright information.
+* SEE ALSO: Provides you with an idea of where you can find additional information.
+
+To search a man page for a term, type the / character followed by a search term, then hit **`Enter`** key.
+
+By default, there are nine sections of man pages:
+* General Commands
+* System Calls
+* Library Calls
+* Special Files
+* File Formats and Conventions
+* Games
+* Miscellaneous
+* System Administration Commands
+* Kernel Routines
+
+The man command searches each of these sections in order until it finds the **`first match`**.
+
+To search for man pages by name, use the *-f* option to the man command. It displays man pages **`that match, or partially match, a specific name`** and provide the section number and a brief description of each man page:
+```
+sysadmin@localhost:~$ man -f passwd                                    
+passwd (5)           - the password file                              
+passwd (1)           - change user password                           
+passwd (1ssl)        - compute password hashes     
+```
+
+On most Linux distributions, the `whatis` command does the same thing as `man -f`. On those distributions both will produce the same output. 
+
+To specify a different section, provide the **`number of the section`** as the first argument of the man command.
+```
+sysadmin@localhost:~$ man 5 passwd
+```
+
+The `-k` option to the man command searches both the **`names and descriptions`** of the man pages for a keyword.
+```
+sysadmin@localhost:~$ man -k copy                                               
+cp (1)               - copy files and directories                               
+cpgr (8)             - copy with locking the given file to the password or gr...
+cpio (1)             - copy files to and from archives                          
+cppw (8)             - copy with locking the given file to the password or gr...
+dd (1)               - convert and copy a file                                  
+debconf-copydb (1)   - copy a debconf database                                  
+install (1)          - copy files and set attributes                            
+scp (1)              - secure copy (remote file copy program)                   
+ssh-copy-id (1)      - use locally available keys to authorize logins on a re...
+```
+On most Linux distributions, the `apropos` command does the same thing as `man -k`. On those distributions, both produce the same output.
+
+To **`search for the location`** of a command or the man pages for a command, use the `whereis` command. 
+
+To find any **`file or directory`**, use the `locate` command. This command searches a database of all files and directories that were on the system when the database was created.
+
+Only the **`root user`** can search for any file in the locate database.
+
+The `-c` option in the `locate` command shows hoy many **`files match`**.
+```
+sysadmin@localhost:~$ locate -c passwd                                 
+98
+```
+### :small_blue_diamond: Info Documentation
+
+The `info` command also provides documentation on operating system commands and features. The goal is slightly different from man pages: **`to provide a documentation resource that gives a logical organizational structure, making reading documentation easier.`**
+
+To display the info documentation for a command, use the info command.
+```
+sysadmin@localhost:~$ info ls       
+```
+Note that going into the node about sorting leads into a sub-node of the original. To **`go back to the previous node`**, use the **`U`** key. While U leads to the start of the node one level up, the **`L`** key returns **`to the same location`** as before entering the sorting node.
+
+To see a listing of **`movement commands`** is hitting the `Shift+H` key. It also works for man pages.
+
+To **`close`** the help screen type the `L` key which brings back the current document.
+
+### :small_blue_diamond: Additional Sources of Help
+
+Many commands will provide basic information, very similar to the SYNOPSIS found in man pages, by simply using the `--help` option to the command. This option is useful to learn the basic usage of a command quickly without leaving the command line:
+```
+sysadmin@localhost:~$  cat --help                                                
+Usage: cat [OPTION]... [FILE]...                                                
+Concatenate FILE(s) to standard output.                                         
+                                                                                
+With no FILE, or when FILE is -, read standard input.                           
+                                                                                
+  -A, --show-all           equivalent to -vET                                   
+  -b, --number-nonblank    number nonempty output lines, overrides -n           
+  -e                       equivalent to -vE                                    
+  -E, --show-ends          display $ at end of each line                        
+  -n, --number             number all output lines                              
+  -s, --squeeze-blank      suppress repeated empty output lines                 
+  -t                       equivalent to -vT                                    
+  -T, --show-tabs          display TAB characters as ^I                         
+  -u                       (ignored)                                            
+  -v, --show-nonprinting   use ^ and M- notation, except for LFD and TAB        
+      --help     display this help and exit                                     
+      --version  output version information and exit                            
+                                                                                
+Examples:                                             
+```
