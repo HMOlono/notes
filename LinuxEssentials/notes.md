@@ -538,6 +538,7 @@ The first character of each line indicates the type of file. The file types are:
 | **`p`** | pipe | Allows for communication between processes. |
 | **`b`** | block file | Used to communicate with hardware. |
 | **`c`** | character file | Used to communicate with hardware. |
+
 The first file alternatives.log is a **`regular file`** (-), while the second file apt is a **`directory`** (d).
 #### :small_orange_diamond: Permissions
 The next nine characters demonstrate the permissions of the file. Permissions indicate how certain users can access a file.
