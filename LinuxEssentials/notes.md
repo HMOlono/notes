@@ -484,4 +484,94 @@ Examples:
 ```
 On most systems, there is a directory where additional documentation is found. The location of these files can vary depending on the distribution that you are using. Typical locations include /usr/share/doc and /usr/doc.
 
+## :large_blue_diamond: Module 7 - Navigating the Filesystem
 
+In Linux, **`everything is considered`** a file. Files are used to store data such as text, graphics, and programs.
+
+In Linux the directory structure is typically called a *filesystem*, and has a top level (/) called the **`root directory`**.
+
+Under the /home directory there is a directory for each user on the system. The directory name is the same as the name of the user (/home/user) and is represented with the **`tilde ~ character`**.
+
+The `pwd` command prints the working directory, which is the current location of the user within the filesystem.
+```
+sysadmin@localhost:~$ pwd
+/home/sysadmin
+```
+
+To navigate the filesystem, use the `cd` (change directory) command.
+
+**`A path`** is a list of directories separated by the / character.
+
+**`Absolute paths`** allow the user to specify the exact location of a directory. It always starts at the root directory, and therefore it always begins with the / character.
+
+**`Relative paths`** start from the current directory. A relative path gives directions to a file relative to the current location in the filesystem.
+
+Two period `..` characters always represents **`one directory higher`** relative to the current directory
+
+The single period `.` character always represents **`the current directory`**
+
+To display all files, including hidden files, use the `-a` option to the `ls` command.
+```
+sysadmin@localhost:~$ ls -a                                            
+.             .bashrc   .selected_editor  Downloads  Public           
+..            .cache    Desktop           Music      Templates         
+.bash_logout  .profile  Documents         Pictures   Videos
+```
+
+### :small_blue_diamond: Long Display Listing
+
+Each file has details associated with it called **`metadata`**. This can include information such as the size, ownership, or timestamps. To view this information, use the `-l` option to the ls command.
+
+The following describes each of the fields of data in the output of the ls -l command:
+```
+-rw-r--r-- 1 root   root  15322 Dec 10 21:33 alternatives.log                   
+drwxr-xr-x 1 root   root   4096 Jul 19 06:52 apt
+```
+#### :small_orange_diamond: File Type
+The first character of each line indicates the type of file. The file types are:
+| Symbol | File Type | Description |
+| :--- | :--- | :--- |
+| **`d`** | directory | A file used to store other files. |
+| **`-`** | regular file | Includes readable files, image files, binary files, and compressed files. |
+| **`l`** | symbolic link | Points to another file. |
+| **`s`** | socket | Allows for communication between processes. |
+| **`p`** | pipe | Allows for communication between processes. |
+| **`b`** | block file | Used to communicate with hardware. |
+| **`c`** | character file | Used to communicate with hardware. |
+The first file alternatives.log is a **`regular file`** (-), while the second file apt is a **`directory`** (d).
+#### :small_orange_diamond: Permissions
+The next nine characters demonstrate the permissions of the file. Permissions indicate how certain users can access a file.
+#### :small_orange_diamond: Hard Link Count
+This number indicates how many hard links point to this file.
+#### :small_orange_diamond: User Owner
+Every file is owned by a user account. This is important because the owner has the rights to set permissions on a file.
+#### :small_orange_diamond: Group Owner
+Indicates which group owns this file. Any member of the group has a set of permissions on the file.
+#### :small_orange_diamond: File size
+Displays the size of the file in bytes. For directories, this value does not describe the total size of the directory, but rather how many bytes are reserved to keep track of the filenames in the directory.
+#### :small_orange_diamond: Timestamps 
+Indicates the time that the file's contents were last modified. For directories, this timestamp indicates the las time a file was added or deleted from the directory.
+#### :small_orange_diamond: File Name
+The final field contains the name of the file or directory.
+___
+To list the current directory but no the contents within it, use the list command with the -d and -l options. (ls -dl)
+```
+sysadmin@localhost:~$ ls -ld                                           
+drwxr-xr-x 1 sysadmin sysadmin 224 Nov  7 17:07 .
+```
+
+There are times when you want to display all of the files in a directory as well as all of the files in all subdirectories under that directory. This is called a **`recursive listing`**.
+
+To perform a recursive listing, use the -R option to the ls command:
+```
+sysadmin@localhost:~$ ls -R /etc/ppp
+/etc/ppp:
+ip-down.d  ip-up.d         
+
+/etc/ppp/ip-down.d:
+bind9
+
+/etc/ppp/ip-up.d:
+bind9
+```
+```
