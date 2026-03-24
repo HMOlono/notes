@@ -575,3 +575,133 @@ bind9
 /etc/ppp/ip-up.d:
 bind9
 ```
+## :large_blue_diamond: Module 8 - Managing Files and Directories
+### :small_blue_diamond: Globbing
+Glob characters are often referred to as **`wild cards`**. These are symbol characters that have special meaning to the shell.
+
+Unlike commands that the shell runs, or options and arguments that the shell passes to commands, glob characters are interpreted by the shell itself before it attempts to run any command. As a result, glob characters can be used with **`any command`**.
+
+#### :small_orange_diamond: Asterisk * Character
+
+The asterisk * character is used to represent **`zero or more`** of any character in a filename.
+```
+sysadmin@localhost:~$ echo /etc/t*                              
+/etc/terminfo /etc/timezone /etc/tmpfiles.d
+```
+
+```
+sysadmin@localhost:~$ echo /etc/*.d                                 
+/etc/apparmor.d /etc/binfmt.d /etc/cron.d /etc/depmod.d /etc/init.d /etc/insserv
+.conf.d /etc/ld.so.conf.d /etc/logrotate.d /etc/modprobe.d /etc/modules-load.d /
+etc/pam.d /etc/profile.d /etc/rc0.d /etc/rc1.d /etc/rc2.d /etc/rc3.d /etc/rc4.d 
+/etc/rc5.d /etc/rc6.d /etc/rcS.d /etc/rsyslog.d /etc/sudoers.d /etc/sysctl.d /et
+c/tmpfiles.d /etc/update-motd.d
+```
+
+```
+sysadmin@localhost:~$ echo /etc/r*.conf                             
+/etc/resolv.conf /etc/rsyslog.conf
+```
+
+#### :small_orange_diamond: Question Mark ? Character
+
+The question mark ? Character represents any single character. Each question mark character matches exactly one character, no more and no less.
+
+For example: display all files in the /etc directory that begin with letter t and have exactly 7 characters after the t character:
+```
+sysadmin@localhost:~$ echo /etc/t???????      
+/etc/terminfo /etc/timezone
+```
+
+```
+sysadmin@localhost:~$ echo /etc/*.???                
+/etc/issue.net /etc/locale.gen
+```
+
+#### :small_orange_diamond: Bracket [] Characters
+The bracket `[]` characters are used to match a single character by representing a range of characters that are possible match characters. For example, the `/etc/[gu]*` pattern matches any file that begins with either a **`g`** or **`u`** character and contains zero or more additional characters:
+```
+sysadmin@localhost:~$ echo /etc/[gu]*                              
+/etc/gai.conf /etc/groff /etc/group /etc/group- /etc/gshadow /etc/gshadow- /etc/
+gss /etc/ucf.conf /etc/udev /etc/ufw /etc/update-motd.d /etc/updatedb.conf        
+```
+
+Brackets can also be used to a represent a **`range of characters`**. For example, the /etc/[a-d]* pattern matches all files that begin with any letter between and including a and d.
+
+The range is based on the **`ASCII text table`**. This table defines a list of characters, arranging them in a specific standard order. If an invalid order is provided, **`no matches will be made`**.
+
+The ASCII text table can be viewed in our virtual machines by executing the `ascii` command.
+
+#### :small_orange_diamond: Exclamation Point ! Character
+
+The exclamation point `!` character is used in conjunction with the square brackets to **`negate a range`**. For example, the pattern /etc/[!DP]* matches any file that does not begin with a D or P.
+
+#### :small_orange_diamond: Listing with Globs
+
+Always use the -d option with globs, which tells the ls command to display the name of directories, instead of their contents:
+```
+sysadmin@localhost:~$ls -d /etc/x*                                             
+/etc/xdg
+```
+
+### :small_blue_diamond: Copying Files
+
+The `cp` command is used to copy files. It requires a source and a destination. The structure of the command is as follows:
+```
+cp source destination
+```
+
+The -v option causes the cp command to produce output if successful. The -v option stands for verbose:
+```
+sysadmin@localhost:~$ cp -v /etc/hosts ~                              
+`/etc/hosts' -> `/home/sysadmin/hosts'
+```
+
+```
+sysadmin@localhost:~$ cp /etc/hosts ~/hosts.copy                      
+sysadmin@localhost:~$ ls                                               
+Desktop    Downloads  Pictures  Templates  hosts                       
+Documents  Music      Public    Videos     hosts.copy 
+```
+
+In the case where the destination file exists, the cp command **`overwrites the existing file's`** contents with the contents of the source file.
+
+With the `-i` interactive option, the cp command **`prompts the user`** before overwriting a file.
+
+To answer n to each prompt automatically, use the `-n` option. It stands for **`no clobber`**, or **`no overwrite`**.
+
+By default, the `cp` command **`will not copy directories`**; any attempt to do so results in an error message.
+
+Use the -r option to copy both files and directories. Ex:
+```
+cp -r source_directory destination_directory
+```
+
+### :small_blue_diamond: Moving Files
+To move a file, use the `mv` command.
+```
+mv source destination
+```
+
+When a file is moved, the file is **`removed`** from the original location and placed in a new location.
+
+### :small_blue_diamond: Creating Files
+To create an empty file, use the touch command as demonstrated below:
+```
+sysadmin@localhost:~$ touch sample                                     
+sysadmin@localhost:~$ ls -l sample                                     
+-rw-rw-r-- 1 sysadmin sysadmin 0 Nov  9 16:48 sample
+```
+The touch command **`doesn't place any data`** within the new file.
+
+### :small_blue_diamond: Removing Files
+
+To delete a file use the `rm` command. To prompt the interactive mode to ask for each file add the `-i` option.
+
+The files are **`permanently deleted`**. There is no command to undelete a file and no trash can from which to recover deleted files.
+
+To delete a directory use the `-r` option because the default behavior is not to **`delete directories`**.
+
+### :small_blue_diamond: Creating Directories
+
+To create a directory use the `mkdir` command.
