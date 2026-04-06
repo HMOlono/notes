@@ -702,6 +702,119 @@ The files are **`permanently deleted`**. There is no command to undelete a file 
 
 To delete a directory use the `-r` option because the default behavior is not to **`delete directories`**.
 
-### :small_blue_diamond: Creating Directories
-
 To create a directory use the `mkdir` command.
+
+## :large_blue_diamond: Archiving and Compression
+
+**`Archiving`**: Combines multiple files into one, (multiple files can be combined into a single archive and then subsequently compressed) which eliminates the overhead in individual files and makes the files easier to transmit.
+**`Compression`**: Makes the files smaller by removing redundant information.
+
+### :small_blue_diamond: Compressing Files
+
+*Compression* reduces the amount of data needed to store or transmit a file while storing it in such a way that the file can be restored.
+
+There are two types of compression:
+* **`Lossless`**: No information is removed from the file. Compressing a file and decompressing it leaves something identical to the original.
+* **`Lossy`**: Information might be removed from the file. It is compressed in such a way that uncompressing a file will result in a file that is slightly different from the original. For instance, an image with two subtly different shades of green might be made smaller by treating those two shades as the same. Often, the eye can’t pick out the difference anyway.
+
+**`Compression`**
+```
+sysadmin@localhost:~/Documents$ gzip longfile.txt
+sysadmin@localhost:~/Documents$ gzip -l longfile.txt.gz
+         compressed        uncompressed  ratio uncompressed_name
+                341               66540  99.5% longfile.txt
+```
+
+**`Decompression`**
+```
+sysadmin@localhost:~/Documents$ gunzip longfile.txt.gz
+sysadmin@localhost:~/Documents$ ls -l longfile*
+-rw-r--r-- 1 sysadmin sysadmin 66540 Dec 20  2017 longfile.txt
+```
+
+The **`gzip`** command uses the **`Lempel-Ziv`** data compression algorithm, while the **`bzip`** utilities use a different compression algorithm called **`Burrows-Wheeler`** block sorting.
+
+The **`xz`** and **`unxz`** tools are functionally similar to gzip and gunzip in that they use the **`Lempel-Ziv-Markov (LZMA)`** chain algorithm.
+
+### :small_blue_diamond: Archiving Files
+
+**`Archiving`** is the process of collecting multiple files and directories into a single file, known as an archive. In Linux, the standard tool for this is **`tar`** (short for Tape ARchive).
+
+The **`tar`** command has three modes that are helpful to become familiar with:
+* Create: Make a new archive out of a series of files.
+* Extract: Pull one or more files out of an archive.
+* List: Show the contents of the archive without extracting.
+
+#### :small_orange_diamond: Create Mode
+```
+tar -c [-f ARCHIVE] [OPTIONS] [FILE...]
+```
+
+Creating an archive with the tar command requires two names options:
+| Option | Function |
+| :--- | :--- |
+| -c | Create an archive. |
+| -f ARCHIVE | Use archive file. The argument **`ARCHIVE`** will be the name of the resulting archive file.
+
+All the remaining arguments are considered as input file names, either as a wildcard, a list of files, or both.
+```
+sysadmin@localhost:~/Documents$ tar -cf alpha_files.tar alpha*
+sysadmin@localhost:~/Documents$ ls -l alpha_files.tar
+-rw-rw-r-- 1 sysadmin sysadmin 10240 Oct 31 17:07 alpha_files.tar
+```
+The wildcard option * is used to include all files that begin with *alpha* in the archive.
+
+| Option | Function |
+| :--- | :--- |
+| -z | Compress (or decompress) an archive using the gzip command. |
+
+The next example shows the same command as the prior example, but with the addition of the -z option.
+```
+sysadmin@localhost:~/Documents$ tar -czf alpha_files.tar.gz alpha*
+sysadmin@localhost:~/Documents$ ls -l alpha_files.tar.gz
+-rw-rw-r-- 1 sysadmin sysadmin 417 Oct 31 17:15 alpha_files.tar.gz
+```
+
+| Option | Function |
+| :--- | :--- |
+| -j | Compress (or decompress) and archive using the **`bzip2`** command. |
+
+#### :small_orange_diamond: List Mode
+```
+tar -t [-f ARCHIVE] [OPTIONS]
+```
+
+| Option | Function |
+| :--- | :--- |
+| -t | List the files in an archive. |
+| -j | Decompress with an bzip2 command. |
+| -f ARCHIVE | Operate on the given archive. |
+
+```
+sysadmin@localhost:~/Documents$ tar -tjf folders.tbz
+School/
+School/Engineering/
+School/Engineering/hello.sh
+School/Art/
+School/Art/linux.txt
+School/Math/
+School/Math/numbers.txt
+```
+
+#### :small_orange_diamond: Extract Mode
+```
+tar -x [-f ARCHIVE] [OPTIONS]
+```
+| Option | Function |
+| :--- | :--- |
+| -x | Extract files from the archive. |
+| -j | Decompress with an bzip2 command. |
+| -f ARCHIVE | Operate on the given archive. |
+
+```
+sysadmin@localhost:~/Downloads$ tar -xjf folders.tbz
+sysadmin@localhost:~/Downloads$ ls -l
+total 8
+drwx------ 5 sysadmin sysadmin 4096 Dec 20  2017 School
+-rw-rw-r-- 1 sysadmin sysadmin  413 Oct 31 18:37 folders.tbz
+```
