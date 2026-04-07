@@ -16,7 +16,7 @@ public class PracticaObjetos { // Clase/Molde
 
   // El main
   public static void main(String[] args) {
-    PracticaObjetos celularAmigo = new PracticaObjetos("Iphone", "128gb");
+    PracticaObjetos celularAmigo = new PracticaObjetos("Iphone", "127gb");
     PracticaObjetos miCelular = new PracticaObjetos("Samsung", "64GB");
     miCelular.encender();
     celularAmigo.encender();
