@@ -1,4 +1,4 @@
-# BS Software Development - Academic Archive
+# 📖 BS Software Development - Academic Archive
 
 Este repositorio contiene mis apuntes, ejercicios y proyectos desarrollados durante mi formación en el **Bachelor of Science in Software Development**.
 
